@@ -1,5 +1,7 @@
 package com.socgen.craftsmanship.katas.simple;
 
+import java.awt.Color;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,9 +20,16 @@ public class ValueInverter {
 	}
 
 	public char convertToASCIICharValue(int value) {
-		//if(value < 32 ||value > 126)
-		//	throw new Value 
+		if(value < 33 || value > 126)
+			throw new IllegalArgumentException("Value parameter is out of the 33 - 126 Range."); 
+		
 		return (char)value;
 	}
+
+	public Color convertHexToColor(String hexValue) {
+		return Color.decode(hexValue);
+	}
+	
+
 
 }

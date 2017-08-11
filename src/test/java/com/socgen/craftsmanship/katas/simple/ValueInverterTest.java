@@ -6,6 +6,7 @@ import static com.googlecode.catchexception.CatchException.caughtException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.awt.Color;
 
 public class ValueInverterTest extends TestBase {
 
@@ -40,6 +41,25 @@ public class ValueInverterTest extends TestBase {
 	}
 
 	@Test
+	public void convertValueShouldThrowIllegalArgumentExceptionWhenPassedAValueIsLowerThan34() {
+		catchException(sut).convertToASCIICharValue(32);
+		assert caughtException() instanceof IllegalArgumentException;
+		caughtException().getMessage().contains("Value parameter is out of the 33 - 126 Range.");
+	}
+	
+	@Test
+	public void convertValueShouldThrowIllegalArgumentExceptionWhenPassedAValueIsHigherThan126() {
+		catchException(sut).convertToASCIICharValue(127);
+		assert caughtException() instanceof IllegalArgumentException;
+		caughtException().getMessage().contains("Value parameter is out of the 33 - 126 Range.");
+	}
+	
+	@Test
+	public void convertToASCIIShouldReturn_ExclamationPoint_WhenPassed33() {
+		Assert.assertEquals('!', sut.convertToASCIICharValue(33));
+	}
+	
+	@Test
 	public void convertToASCIIShouldReturn_a_WhenPassed97() {
 		Assert.assertEquals('a', sut.convertToASCIICharValue(97));
 	}
@@ -49,5 +69,18 @@ public class ValueInverterTest extends TestBase {
 		Assert.assertEquals('Z', sut.convertToASCIICharValue(90));
 	}
 	
-
+	@Test
+	public void convertToASCIIShouldReturn_Tilde_WhenPassed126() {
+		Assert.assertEquals('~', sut.convertToASCIICharValue(126));
+	}
+	
+	@Test
+	public void convertHexToColorShouldReturnWhiteWhenPassedFFFFFF(){
+		Assert.assertEquals(Color.WHITE, sut.convertHexToColor("#FFFFFF"));
+	}
+	
+	@Test
+	public void convertHexToColorShouldReturnWhiteWhenPassed000000(){
+		Assert.assertEquals(Color.BLACK, sut.convertHexToColor("#000000"));
+	}
 }
