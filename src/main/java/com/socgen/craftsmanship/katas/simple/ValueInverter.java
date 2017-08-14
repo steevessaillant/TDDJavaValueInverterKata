@@ -7,29 +7,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class ValueInverter {
 
-	public boolean convertValue(boolean value) {
+	public boolean invertValue(boolean value) {
 		return !value;
 	}
 
-	public long convertValue(Integer value) {
-		
-		if(value == null)
-			throw new NullPointerException("Value was null, cannot pass a null value to this method"); 
+	public float invertValue(Float value) {
+		if (value == null)
+			throw new NullPointerException("Value was null, cannot pass a null value to this method");
 		else
-			return -value.longValue();
+			return -value.floatValue();
 	}
 
-	public char convertToASCIICharValue(int value) {
-		if(value < 33 || value > 126)
-			throw new IllegalArgumentException("Value parameter is out of the 33 - 126 Range."); 
-		
-		return (char)value;
+	public Color invertColor(Color color) {
+		if (color == null)
+			throw new NullPointerException("Color was null, cannot pass a null value to this method");
+		else
+			return new Color(255 - color.getRed(), 255 - color.getGreen(), 255 - color.getBlue());
 	}
-
-	public Color convertHexToColor(String hexValue) {
-		return Color.decode(hexValue);
-	}
-	
-
 
 }
