@@ -80,10 +80,6 @@ public class ValueInverterTest extends TestBase {
 	public void invertColorShoudReturnYELLOWWhenPassedBLUE(){
 		assertThat(sut.invertColor(Color.BLUE)).isEqualTo(Color.YELLOW);
 	}
-	
-	
-	
-	
-	
-	
+
+
 }
