@@ -1,10 +1,12 @@
 package com.socgen.craftsmanship.katas.simple;
-import static org.assertj.core.api.Assertions.*;
-
-import java.awt.Color;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.awt.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 
 
@@ -27,7 +29,9 @@ public class ValueInverterTest extends TestBase {
 	@Test
 	public void invertValueShouldThrowNullPointerExceptionWhenPassedNullAndDisplayMessage() {
 		assertThatExceptionOfType(NullPointerException.class)
-		 	.isThrownBy(() ->  { sut.invertValue(null); })
+				.isThrownBy ( ( ) -> {
+					sut.invertValue ( null );
+				} )
 		 	.withMessage("Value was null, cannot pass a null value to this method");
 	}
 
@@ -45,8 +49,10 @@ public class ValueInverterTest extends TestBase {
 	@Test
 	public void invertColorShouldThrowNullPointerExceptionWhenPassedNullAndDisplayMessage() {
 		assertThatExceptionOfType(NullPointerException.class)
-		 	.isThrownBy(() ->  { sut.invertColor(null); })
-		 	.withMessage("Color was null, cannot pass a null value to this method");
+				.isThrownBy ( ( ) -> {
+					sut.invertColor ( null );
+				} )
+				.withMessage ( "Color was null, cannot pass a null value to this method" );
 	}
 
 	@Test 
