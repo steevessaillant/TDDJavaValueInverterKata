@@ -20,20 +20,12 @@
 					<configuration>
 						<fork>true</fork>
 						<executable>D:\Java\jdk1.8.0_131\bin\javaw.exe</executable>
-					</configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
