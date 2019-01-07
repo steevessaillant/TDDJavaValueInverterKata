@@ -9,9 +9,6 @@
 	<lib name="Maven: org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE" scope="TEST"/>
 	<lib name="Maven: org.springframework.boot:spring-boot-test:1.4.0.RELEASE" scope="TEST"/>
 	<lib name="Maven: org.springframework.boot:spring-boot:1.4.0.RELEASE" scope="TEST"/>
-	<lib name="Maven: org.springframework:spring-context:4.3.2.RELEASE" scope="TEST"/>
-	<lib name="Maven: org.springframework:spring-aop:4.3.2.RELEASE" scope="TEST"/>
-	<lib name="Maven: org.springframework:spring-expression:4.3.2.RELEASE" scope="TEST"/>
 	<lib name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:1.4.0.RELEASE" scope="TEST"/>
 	<lib name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.4.0.RELEASE" scope="TEST"/>
 	<lib name="Maven: com.jayway.jsonpath:json-path:2.2.0" scope="TEST"/>
@@ -36,9 +33,6 @@
 		<level name="Maven: org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE" value="project"/>
 		<level name="Maven: org.springframework.boot:spring-boot-test:1.4.0.RELEASE" value="project"/>
 		<level name="Maven: org.springframework.boot:spring-boot:1.4.0.RELEASE" value="project"/>
-		<level name="Maven: org.springframework:spring-context:4.3.2.RELEASE" value="project"/>
-		<level name="Maven: org.springframework:spring-aop:4.3.2.RELEASE" value="project"/>
-		<level name="Maven: org.springframework:spring-expression:4.3.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:1.4.0.RELEASE" value="project"/>
 		<level name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.4.0.RELEASE" value="project"/>
 		<level name="Maven: com.jayway.jsonpath:json-path:2.2.0" value="project"/>
@@ -55,5 +49,9 @@
 		<level name="Maven: org.springframework:spring-test:4.3.2.RELEASE" value="project"/>
 		<level name="Maven: junit:junit:4.12" value="project"/>
 		<level name="Maven: org.assertj:assertj-core:3.8.0" value="project"/>
+		<level name="Maven: org.springframework:spring-context:4.3.2.RELEASE" value="project"/>
+		<level name="Maven: org.springframework:spring-aop:4.3.2.RELEASE" value="project"/>
+		<level name="Maven: org.springframework:spring-expression:4.3.2.RELEASE" value="project"/>
+		<level name="Maven: org.codehaus.groovy:groovy-all:2.4.12" value="project"/>
 	</levels>
 </component>
