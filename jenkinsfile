@@ -1,10 +1,11 @@
 node {
     def mvnHome
-    mvnHome = tool 'M3-IJ'
+    mvnHome = tool 'Maven_3_6_0'
     stage('Fetch sources and build sources') {
 
         git 'https://github.com/steevessaillant/TDDJavaValueInverterKata'
         //maven compile
+
         if (isUnix()) {
             sh "'${mvnHome}/bin/mvn' compile "
         } else {
