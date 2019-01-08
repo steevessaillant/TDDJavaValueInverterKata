@@ -9,7 +9,7 @@ node {
         if (isUnix()) {
             sh "'${mvnHome}/bin/mvn' compile "
         } else {
-            bat(/"${mvnHome}\bin\mvn" compile/)
+            bat(/"${mvnHome}\bin\mvn" compile -X/)
         }
 
     }
