@@ -19,9 +19,7 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 					<configuration>
-						<fork>true</fork>
-						<executable>D:\Java\jdk1.8.0_131\bin\javaw.exe</executable>
-                        <source>1.8</source>
+						<source>1.8</source>
                         <target>1.8</target>
                     </configuration>
 				</plugin>
