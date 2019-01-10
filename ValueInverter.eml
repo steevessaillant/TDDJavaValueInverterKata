@@ -3,6 +3,8 @@
 	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
 	<contentEntry url="file://$MODULE_DIR$">
 		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
+		<testFolder url="file://$MODULE_DIR$/src/test/integration-tests"/>
+		<testFolder url="file://$MODULE_DIR$/src/test"/>
 		<excludeFolder url="file://$MODULE_DIR$/target"/>
 	</contentEntry>
 	<lib name="Maven: org.mockito:mockito-all:1.10.19" scope="TEST"/>
@@ -25,6 +27,7 @@
 	<lib name="Maven: org.springframework:spring-test:4.3.2.RELEASE" scope="TEST"/>
 	<lib name="Maven: junit:junit:4.12" scope="TEST"/>
 	<lib name="Maven: org.assertj:assertj-core:3.8.0" scope="TEST"/>
+	<lib name="Maven: info.cukes:cucumber-junit:1.2.5" scope="TEST"/>
 	<levels>
 		<level name="Maven: org.springframework:spring-beans:4.3.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-core:4.3.3.RELEASE" value="project"/>
@@ -53,5 +56,11 @@
 		<level name="Maven: org.springframework:spring-aop:4.3.2.RELEASE" value="project"/>
 		<level name="Maven: org.springframework:spring-expression:4.3.2.RELEASE" value="project"/>
 		<level name="Maven: org.codehaus.groovy:groovy-all:2.4.12" value="project"/>
+		<level name="Maven: info.cukes:cucumber-junit:1.2.5" value="project"/>
+		<level name="Maven: info.cukes:cucumber-core:1.2.5" value="project"/>
+		<level name="Maven: info.cukes:cucumber-html:0.2.3" value="project"/>
+		<level name="Maven: info.cukes:cucumber-jvm-deps:1.0.5" value="project"/>
+		<level name="Maven: info.cukes:gherkin:2.12.2" value="project"/>
+		<level name="Maven: info.cukes:cucumber-java:1.2.5" value="project"/>
 	</levels>
 </component>
