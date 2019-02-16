@@ -6,9 +6,9 @@ node {
         git 'https://github.com/steevessaillant/TDDJavaValueInverterKata'
         //maven compile
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' compile "
+            sh "'${mvnHome}/bin/mvn' clean install"
         } else {
-            bat(/"${mvnHome}\bin\mvn" compile/)
+            bat(/"${mvnHome}\bin\mvn" clean install/)
         }
 
     }
@@ -16,20 +16,20 @@ node {
     stage('Test') {
         //maven test
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' test "
+            sh "'${mvnHome}/bin/mvn' verify "
         } else {
-            bat(/"${mvnHome}\bin\mvn" test/)
+            bat(/"${mvnHome}\bin\mvn" verify/)
         }
 
     }
     stage('Deploy') {
 
-        //maven compile
-        //if (isUnix()) {
-        //    sh "'${mvnHome}/bin/mvn' package "
-        //} else {
-        //    bat(/"${mvnHome}\bin\mvn" package/)
-        //}
+        maven compile
+        if (isUnix()) {
+            sh "'${mvnHome}/bin/mvn' package "
+        } else {
+            bat(/"${mvnHome}\bin\mvn" package/)
+        }
         echo "This stage is commented out for now!"
     }
 }
