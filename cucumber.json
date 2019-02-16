@@ -1,0 +1,98 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Test with boolean",
+        "description": "",
+        "id": "implement-a-value-converter-for-boolean,-numbers-and-colors;test-with-boolean",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 291352834,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I start the system",
+            "match": {
+              "location": "ValueInverterStepDefs.i_start_the_system()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4264567,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat org.craftsmanship.katas.simple.stepDefinitions.ValueInverterStepDefs.i_pass(ValueInverterStepDefs.java:32)\r\n\tat ✽.When I pass(features/ValueInverterTests.feature:4)\r\n",
+              "status": "pending"
+            },
+            "line": 4,
+            "name": "I pass",
+            "match": {
+              "location": "ValueInverterStepDefs.i_pass(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "value"
+                ],
+                "line": 5
+              },
+              {
+                "cells": [
+                  "false"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "true"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I should obtain",
+            "match": {
+              "location": "ValueInverterStepDefs.i_should_obtain(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "expected"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "true"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "false"
+                ],
+                "line": 11
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Implement a Value converter for boolean, numbers and colors",
+    "description": "",
+    "id": "implement-a-value-converter-for-boolean,-numbers-and-colors",
+    "keyword": "Feature",
+    "uri": "features/ValueInverterTests.feature"
+  }
+]
