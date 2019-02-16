@@ -23,7 +23,13 @@ node {
 
     }
 
-    stage('Generate HTML report') {
+    stage('JUnit unit-test report'){
+        always {
+                junit '**/surefire-reports/*.xml'
+              }
+    }
+
+    stage('Cucumber functional tests report') {
             cucumber buildStatus: 'UNSTABLE',
                     fileIncludePattern: '**/cucumber.json',
                     trendsLimit: 10,
