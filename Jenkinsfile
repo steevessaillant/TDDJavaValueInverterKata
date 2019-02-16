@@ -30,7 +30,7 @@ node {
                     classifications: [
                         [
                             'key': 'Browser',
-                            'value': 'Firefox'
+                            'value': 'Chrome'
                         ]
                     ]
         }
