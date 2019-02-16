@@ -25,7 +25,7 @@ node {
 
     stage('Generate HTML report') {
             cucumber buildStatus: 'UNSTABLE',
-                    fileIncludePattern: '**/*.json',
+                    fileIncludePattern: '**/cucumber.json',
                     trendsLimit: 10,
                     classifications: [
                         [
