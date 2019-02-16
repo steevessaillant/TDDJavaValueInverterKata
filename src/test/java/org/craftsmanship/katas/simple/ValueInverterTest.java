@@ -52,28 +52,28 @@ public class ValueInverterTest extends TestBase {
 	}
 
 	@Test 
-	public void invertColorShoudReturnBLACKWhenPassedWHITE(){
+	public void invertColorShouldReturnBLACKWhenPassedWHITE(){
 		assertThat(sut.invertColor(Color.BLACK)).isEqualTo(Color.WHITE);
 	}
 	
 	@Test 
-	public void invertColorShoudReturnWHITEWhenPassedBLACK(){
+	public void invertColorShouldReturnWHITEWhenPassedBLACK(){
 		assertThat(sut.invertColor(Color.WHITE)).isEqualTo(Color.BLACK);
 	}
 	
 	
 	@Test 
-	public void invertColorShoudReturnCYANWhenPassedRED(){
+	public void invertColorShouldReturnCYANWhenPassedRED(){
 		assertThat(sut.invertColor(Color.RED)).isEqualTo(Color.CYAN);
 	}
 	
 	@Test 
-	public void invertColorShoudReturnMAGENTAWhenPassedGREEN(){
+	public void invertColorShouldReturnMAGENTAWhenPassedGREEN(){
 		assertThat(sut.invertColor(Color.GREEN)).isEqualTo(Color.MAGENTA);
 	}
 	
 	@Test 
-	public void invertColorShoudReturnYELLOWWhenPassedBLUE(){
+	public void invertColorShouldReturnYELLOWWhenPassedBLUE(){
 		assertThat(sut.invertColor(Color.BLUE)).isEqualTo(Color.YELLOW);
 	}
 
