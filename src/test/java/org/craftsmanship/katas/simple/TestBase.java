@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @BootstrapWith(SpringBootTestContextBootstrapper.class)
 @SpringBootTest(classes = TestBase.class)
 @Configuration
-@ComponentScan(basePackages = { "com.craftsmanship.katas.simple" })
+@ComponentScan(basePackages = { "org.craftsmanship.katas.simple" })
 public abstract class TestBase extends SpringBootTestContextBootstrapper {
 
 }

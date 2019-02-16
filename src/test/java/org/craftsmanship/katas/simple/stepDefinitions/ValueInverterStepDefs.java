@@ -5,13 +5,23 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.craftsmanship.katas.simple.ValueInverter;
+import org.junit.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 
-public class ValueInverterStepDefs{
-    @Given("^I pass values to the SUT$")
-    public void i_pass_values_to_the_SUT() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+@ContextConfiguration(
+        classes = ValueInverter.class)
+public class ValueInverterStepDefs extends StepsDefsTestBase {
+
+    @Autowired
+    private ValueInverter sut;
+
+    @Given("^I start the system$")
+    public void i_start_the_system() throws Throwable {
+        Assert.assertNotNull(sut);
     }
+
 
     @When("^I pass$")
     public void i_pass(DataTable arg1) throws Throwable {

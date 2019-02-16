@@ -1,6 +1,6 @@
 Feature: Implement a Value converter for boolean, numbers and colors
   Scenario: Test with boolean
-    Given I pass values to the SUT
+    Given I start the system
     When I pass
       | value |
       | false |
