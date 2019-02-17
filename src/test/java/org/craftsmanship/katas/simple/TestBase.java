@@ -15,7 +15,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = TestBase.class)
 @Configuration
 @ComponentScan(basePackages = { "org.craftsmanship.katas.simple" })
-@Lazy
 public abstract class TestBase extends SpringBootTestContextBootstrapper {
 
 }
