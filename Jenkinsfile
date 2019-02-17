@@ -6,9 +6,9 @@ node {
         git 'https://github.com/steevessaillant/TDDJavaValueInverterKata'
         //maven compile
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' compile "
+            sh "'${mvnHome}/bin/mvn' compile -Dmaven.test.failure.ignore=true"
         } else {
-            bat(/"${mvnHome}\bin\mvn" compile/)
+            bat(/"${mvnHome}\bin\mvn" compile -Dmaven.test.failure.ignore=true/)
         }
 
     }
@@ -17,9 +17,9 @@ node {
         //maven test
         propagate: false
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' test -Dmaven.test.failure.ignore=true"
+            sh "'${mvnHome}/bin/mvn' test "
         } else {
-            bat(/"${mvnHome}\bin\mvn" test-Dmaven.test.failure.ignore=true/)
+            bat(/"${mvnHome}\bin\mvn" test/)
         }
 
     }
