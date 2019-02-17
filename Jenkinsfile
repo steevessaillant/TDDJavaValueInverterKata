@@ -42,6 +42,7 @@ node {
     stage('Cucumber functional tests report') {
             cucumber buildStatus: 'UNSTABLE',
                     fileIncludePattern: '**/cucumber.json',
+                    failedStepsNumber = 1,
                     trendsLimit: 10,
                     classifications: [
                         [
