@@ -17,9 +17,9 @@ node {
         //maven test
         propagate: false
         if (isUnix()) {
-            sh "'${mvnHome}/bin/mvn' test "
+            sh "'${mvnHome}/bin/mvn' test -Dmaven.test.failure.ignore=true"
         } else {
-            bat(/"${mvnHome}\bin\mvn" test/)
+            bat(/"${mvnHome}\bin\mvn" test-Dmaven.test.failure.ignore=true/)
         }
 
     }
