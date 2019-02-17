@@ -39,18 +39,6 @@ node {
               }
     }
 
-    stage('Cucumber functional tests report') {
-            cucumber buildStatus: 'UNSTABLE',
-                    fileIncludePattern: '**/cucumber.json',
-                    failedStepsNumber: 1,
-                    trendsLimit: 10,
-                    classifications: [
-                        [
-                            'key': 'Browser',
-                            'value': 'Chrome'
-                        ]
-                    ]
-        }
     stage('Deploy') {
 
         //maven deploy to nexus
@@ -65,6 +53,17 @@ node {
             currentBuild.result = "SUCCESS"
         } else {
             currentBuild.result = "UNSTABLE"
+        }
+
+        post {
+            success{
+                cucumber buildStatus: 'STABLE',
+                                    fileIncludePattern: '**/cucumber.json',
+            }
+            failure{
+                cucumber buildStatus: 'UNSTABLE',
+                                    fileIncludePattern: '**/cucumber.json',
+            }
         }
 }
 
