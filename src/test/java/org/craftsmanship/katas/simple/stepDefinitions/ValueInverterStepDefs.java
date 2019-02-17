@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.assertj.core.api.ThrowableAssertAlternative;
+import org.beryx.awt.color.ColorFactory;
 import org.craftsmanship.katas.simple.ValueInverter;
 import org.junit.Assert;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,6 +14,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +28,10 @@ public class ValueInverterStepDefs extends StepsDefsTestBase {
     private List<BoolTableValues> expectedBoolTableValues;
     private List<FloatTableValues> actualFloatTableValues;
     private List<FloatTableValues> expectedFloatTableValues;
+    private List<String> actualColorTableValues;
+    private List<ColorTableValues> expectedColorTableValues;
     private ThrowableAssertAlternative<NullPointerException> trownNullPointerException;
+
 
 
     @Given("^I start the system$")
@@ -74,5 +79,13 @@ public class ValueInverterStepDefs extends StepsDefsTestBase {
         this.expectedFloatTableValues = new ArrayList<>();
         this.actualFloatTableValues.forEach(x -> expectedFloatTableValues
                 .add(new FloatTableValues(this.sut.invertValue(x.getValue()))));
+    }
+
+    @When("^I pass colors$")
+    public void iPassColors(DataTable actual) {
+        this.actualColorTableValues = actual.asList(String.class);
+        this.expectedColorTableValues = new ArrayList<>();
+        this.actualColorTableValues.forEach(x -> expectedColorTableValues
+                .add(new ColorTableValues(this.sut.invertColor(ColorFactory.valueOf(x.toLowerCase())))));
     }
 }

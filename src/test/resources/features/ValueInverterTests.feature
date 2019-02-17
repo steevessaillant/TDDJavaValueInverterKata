@@ -24,3 +24,14 @@ Feature: Implement a Value converter for boolean, numbers and colors
     Given I start the system
     When I pass null
     Then I should obtain "Value was null, cannot pass a null value to this method"     |
+
+  Scenario: Test with Colors
+    Given I start the system
+    When I pass colors
+      | value |
+      | Black |
+      | White |
+    Then I should obtain inverted colcor
+      | value    |
+      | White    |
+      | Black    |
