@@ -5,7 +5,7 @@ node {
 
     stage('Fetch sources and build sources') {
         //get sources
-        git fetch 'https://github.com/steevessaillant/TDDJavaValueInverterKata'
+        git clone 'https://github.com/steevessaillant/TDDJavaValueInverterKata.git'
         //maven compile
         if (isUnix()) {
             sh "'${mvnHome}/bin/mvn' compile -Dmaven.test.failure.ignore=true"
