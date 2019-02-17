@@ -15,6 +15,7 @@ node {
 
     stage('Test') {
         //maven test
+        propagate: false
         if (isUnix()) {
             sh "'${mvnHome}/bin/mvn' test "
         } else {
