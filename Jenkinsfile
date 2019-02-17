@@ -58,11 +58,11 @@ node {
         post {
             success{
                 cucumber buildStatus: 'STABLE',
-                                    fileIncludePattern: '**/cucumber.json',
+                                    fileIncludePattern: '**/cucumber.json'
             }
             failure{
                 cucumber buildStatus: 'UNSTABLE',
-                                    fileIncludePattern: '**/cucumber.json',
+                                    fileIncludePattern: '**/cucumber.json'
             }
         }
 }
