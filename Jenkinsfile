@@ -5,7 +5,7 @@ node {
 
     stage('Fetch sources and build sources') {
         //get sources
-        git clone 'https://github.com/steevessaillant/TDDJavaValueInverterKata.git'
+        git 'https://github.com/steevessaillant/TDDJavaValueInverterKata'
         //maven compile
         if (isUnix()) {
             sh "'${mvnHome}/bin/mvn' compile -Dmaven.test.failure.ignore=true"
@@ -42,7 +42,7 @@ node {
     stage('Cucumber functional tests report') {
             cucumber buildStatus: 'UNSTABLE',
                     fileIncludePattern: '**/cucumber.json',
-                    failedStepsNumber: = 1,
+                    failedStepsNumber: 1,
                     trendsLimit: 10,
                     classifications: [
                         [
